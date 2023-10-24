@@ -5,7 +5,7 @@ const transformAnuncios = (anuncios) => {
         name: anuncio.title,
         description: anuncio.description,
         price: anuncio.price,
-        isForSale: anuncio.category
+        isForSale: anuncio.isForSale
     }))
 };
 
@@ -19,7 +19,7 @@ export const getAnuncios = async () => {
         parsedAnuncios = transformAnuncios(anuncios)
         
     } catch (error) {
-        console.log('Ha ocurrido un error')
+        throw error;
     }
     return parsedAnuncios
 }
