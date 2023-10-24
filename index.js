@@ -13,5 +13,5 @@ loadAnuncioButton.addEventListener('click', () => {
 });
 
 anuncioList.addEventListener('anunciosLoaded', (event) => {
-    showNotifications(event.detail.message);
+    showNotifications(event.detail.message, event.detail.type);
 });
