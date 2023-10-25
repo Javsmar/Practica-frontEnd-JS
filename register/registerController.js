@@ -1,17 +1,30 @@
+import { createUser } from "./registerModel.js";
+
 export const registerController = (registerForm) => {
-    registerForm.addEventListener("submit",(event) =>  {validateForm(event, registerForm)});
+    registerForm.addEventListener("submit", (event) =>  {validateForm(event, registerForm)});
 }
 
-const validateForm = (event, registerForm) => {
+const validateForm = async (event, registerForm) => {
     event.preventDefault();
 
     const email = registerForm.querySelector('#email');
     const password = registerForm.querySelector('#password');
     const passwordConfirm = registerForm.querySelector('#password-confirm');
 
-    if(isFormValid(email, password, passwordConfirm)){
-        createUser(email, password)
-    };
+    try {
+        if (isFormValid(email, password, passwordConfirm)) {
+            await createUser(email.value, password.value);
+            dispatchEvent('userCreated', {
+                type: "success",
+                message: 'Usuario creado correctamente',
+            }, registerForm);
+        }
+    } catch (error) {
+        dispatchEvent('userCreated', {
+            type: "error",
+            message: error,
+        }, registerForm);
+    }
 };
 
 const isFormValid = (email, password, passwordConfirm) => {
@@ -25,17 +38,23 @@ const isEmailValid = (email) => {
     const emailRegExp = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
     let result = true
     if(!emailRegExp.test(email.value)){
-        alert('El email no es correcto')
-        result = false;
-    };
+        throw 'El email no es correcto';
+    }
     return result
 };
 
 const isPasswordValid = (password, passwordConfirm) => {
     let result = true;
     if(password.value !== passwordConfirm.value){
-        alert('Las contraseñas no son iguales')
-        result = false
+        throw 'Las contraseñas no son iguales'
     };
     return result;
+};
+
+const dispatchEvent = (eventName, data, registerForm) => {
+    const event = new CustomEvent(eventName, {
+        detail: data
+    });
+
+    registerForm.dispatchEvent(event);
 };

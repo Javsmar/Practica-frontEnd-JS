@@ -18,3 +18,4 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('offline', () => {
     showNotifications('Se ha perdido la conexión', 'error');
 })
+
