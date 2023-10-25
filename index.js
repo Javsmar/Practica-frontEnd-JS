@@ -14,3 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showNotifications(event.detail.message, event.detail.type);
     });
 })
+
+window.addEventListener('offline', () => {
+    showNotifications('Se ha perdido la conexión', 'error');
+})

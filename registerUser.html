@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+</head>
+<body>
+    <h1>Registro</h1>
+    <form id="register">
+        <label for="email">Email</label>
+        <input type="email" id="email"  required>
+
+        <label for="password">contraseña</label>
+        <input type="password" id="password" required minlength="6">
+    
+        <label for="password-confirm">Repita contraseña</label>
+        <input type="password" id="password-confirm" required minlength="6">
+        
+        <button type="submit">Crear usuario</button>
+    </form>
+
+
+    <script type="module" src="register/registerIndex.js"></script>
+</body>
+</html>
