@@ -4,11 +4,15 @@ import { buildAnuncio, emptyAnuncios } from "./anunciosListView.js";
 export const anunciosController = async (anuncioList) => {
     anuncioList.innerHTML = '';
     let anuncios = [];
+
     try {
+        dispatchEvent('startLoadingAnuncios', null, anuncioList);
         anuncios = await getAnuncios();
     } catch (error) {
         const event = createCustomEvent('error', 'Error al cargar anuncios')
         anuncioList.dispatchEvent(event);
+    }finally{
+        dispatchEvent('finishLoadingAnuncios', null, anuncioList);
     }
 
     const countAnunciosElement = document.getElementById('countAnuncios');
@@ -48,4 +52,13 @@ const createCustomEvent = (type, message) => {
         }
     });
     return event;
+}
+
+
+const dispatchEvent = (eventName, data, element) => {
+    const event = new CustomEvent(eventName, {
+        detail: data
+    });
+
+    element.dispatchEvent(event);
 }
