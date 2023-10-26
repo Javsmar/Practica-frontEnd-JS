@@ -26,6 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
         hide();
     });
     
+    
+    anuncioList.addEventListener('startRegisterUser', () => {
+        show();
+    });
+    
+    anuncioList.addEventListener('finishRegisterUser', () => {
+        hide();
+    });
+
     anunciosController(anuncioList);
     
     const session = document.getElementById('session');

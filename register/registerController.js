@@ -1,4 +1,5 @@
 import { createUser } from "./registerModel.js";
+import {dispatchEvent} from "../utils/dispatchEvents.js"
 
 export const registerController = (registerForm) => {
     registerForm.addEventListener("submit", (event) =>  {validateForm(event, registerForm)});
@@ -12,6 +13,9 @@ const validateForm = async (event, registerForm) => {
     const passwordConfirm = registerForm.querySelector('#password-confirm');
 
     try {
+
+        dispatchEvent('startRegisterUser', null, registerForm)
+
         if (isFormValid(email, password, passwordConfirm)) {
             await createUser(email.value, password.value);
             dispatchEvent('userCreated', {
@@ -25,6 +29,8 @@ const validateForm = async (event, registerForm) => {
             type: "error",
             message: error,
         }, registerForm);
+    }finally{
+        dispatchEvent('finishRegisterUser', null, registerForm);
     }
 };
 
@@ -52,10 +58,5 @@ const isPasswordValid = (password, passwordConfirm) => {
     return result;
 };
 
-const dispatchEvent = (eventName, data, registerForm) => {
-    const event = new CustomEvent(eventName, {
-        detail: data
-    });
 
-    registerForm.dispatchEvent(event);
-};
+

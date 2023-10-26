@@ -1,3 +1,4 @@
+import { dispatchEvent } from "../utils/dispatchEvents.js";
 import { getAnuncios } from "./anunciosListModel.js";
 import { buildAnuncio, emptyAnuncios } from "./anunciosListView.js";
 
@@ -55,10 +56,4 @@ const createCustomEvent = (type, message) => {
 }
 
 
-const dispatchEvent = (eventName, data, element) => {
-    const event = new CustomEvent(eventName, {
-        detail: data
-    });
 
-    element.dispatchEvent(event);
-}
