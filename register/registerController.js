@@ -18,6 +18,7 @@ const validateForm = async (event, registerForm) => {
                 type: "success",
                 message: 'Usuario creado correctamente',
             }, registerForm);
+            window.location = './login.html';
         }
     } catch (error) {
         dispatchEvent('userCreated', {
