@@ -5,7 +5,8 @@ const transformAnuncios = (anuncios) => {
         name: anuncio.title,
         description: anuncio.description,
         price: anuncio.price,
-        isForSale: anuncio.isForSale
+        isForSale: anuncio.isForSale,
+        id: anuncio.id 
     }))
 };
 

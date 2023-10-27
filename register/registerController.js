@@ -29,6 +29,9 @@ const validateForm = async (event, registerForm) => {
             type: "error",
             message: error,
         }, registerForm);
+        setTimeout(()=>{
+            window.location = './index.html';
+        }, 3000)
     }finally{
         dispatchEvent('finishRegisterUser', null, registerForm);
     }
