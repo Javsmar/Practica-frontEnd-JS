@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cración Anuncios</title>
+</head>
+<body>
+    <h1>Crear Anuncio</h1>
+    <section id="notification"></section>
+    <form id="anuncioCreation">
+        <label for="photo">Foto</label>
+        <input type="text" name="photo" id="photo" required>
+
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="date">fecha creación</label>
+        <input type="date"  name="date" id="date" required>
+
+        <label for="description">Descripción</label>
+        <textarea type="text" name="description"  id="description" cols="30" rows="10" required></textarea>
+
+
+        <label for="price">precio</label>
+        <input type="number" step="any" name="price" id="price" required>
+
+        <label for="isForSale">En Venta</label>
+        <input type="radio" name="isFor" value="sale" id="isForSale" required>
+
+        <label for="isForPurchase">En Compra</label>
+        <input type="radio" name="isFor" value="purchase" id="isForPurchase" required>
+
+
+        <button type="submit">Crear Anuncio</button>
+    </form>
+
+
+    <script type="module" src="./anunciosCreation/creationIndex.js"></script>
+</body>
+</html>

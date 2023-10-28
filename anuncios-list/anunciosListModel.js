@@ -1,8 +1,9 @@
 const transformAnuncios = (anuncios) => {
     return anuncios.map(anuncio => ({
+        handler: anuncio.user.username,
         photo: anuncio.photo,
         date: new Date().toISOString(),
-        name: anuncio.title,
+        name: anuncio.name,
         description: anuncio.description,
         price: anuncio.price,
         isForSale: anuncio.isForSale,
@@ -11,7 +12,7 @@ const transformAnuncios = (anuncios) => {
 };
 
 export const getAnuncios = async () => {
-    const url = "http://localhost:8000/api/anuncios";
+    const url = "http://localhost:8000/api/anuncios?_expand=user";
     let parsedAnuncios = [];
     try {
 

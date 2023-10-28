@@ -3,6 +3,7 @@
 export const buildAnuncio = (anuncio) => {
     return `
     <a href="../anunciosDetails.html?id=${anuncio.id}">
+    <span>Autor: ${anuncio.handler}</span><br><br>
     <img src="${anuncio.photo}" alt="Imagen del producto"><br><br>
     <span>nombre: ${anuncio.name}</span><br><br>
     <span>fecha: ${anuncio.date}</span>
