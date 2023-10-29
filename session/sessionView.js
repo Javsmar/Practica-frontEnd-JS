@@ -11,6 +11,7 @@ export const buildUnauthorizedSession = () => {
 
 export const buildAuthenticatedSession = () => {
     return `
+    <a href="./anuncioscreation.html">create anuncio</a>
     <button>Cerrar sesión</button>
     `
 }

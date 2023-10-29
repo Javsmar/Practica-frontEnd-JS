@@ -9,7 +9,7 @@ export const createAnuncio = async (photo, name, date, description, price, enVen
         date: date,
         description: description,
         price: price,
-        isForSale: enVenta, 
+        isForSale: enVenta,
         isForPurchase: enCompra
     }
 

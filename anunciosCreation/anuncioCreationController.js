@@ -13,9 +13,10 @@ export const anuncioCreationController = async (anuncioCreation) => {
         const description = formData.get('description');
         const price = formData.get('price');
 
-        const isFor = formData.get('isFor'); // Obtiene el valor del radio button seleccionado
+        const isFor = formData.get('isFor'); 
 
         try {
+            dispatchEvent('startAnuncioCreation', null, anuncioCreation);
             if (isFor === 'sale') {
                 await createAnuncio(photo, name, date, description, price, true, false);
             } else if (isFor === 'purchase') {
@@ -24,11 +25,14 @@ export const anuncioCreationController = async (anuncioCreation) => {
                 alert('ninguna opción está seleccionada')
             }
             dispatchEvent('anuncioCreated', {type: "success", message: "anuncio creado correctamente"}, anuncioCreation)
+            alert('anuncio ok')
             setTimeout(() => {
                 window.location = "index.html"
             }, 2000)
         } catch (error) {
-            dispatchEvent('tweetCreated', {type: "error", message: "Error creando anuncio"}, anuncioCreation);
+            dispatchEvent('anuncioCreated', {type: "error", message: "Error creando anuncio"}, anuncioCreation);
+        }finally{
+            dispatchEvent('finishAnuncioCreation', null, anuncioCreation);
         }
     })
 }
