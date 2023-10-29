@@ -1,0 +1,40 @@
+body{
+    background-image: url(../images/login.png) ;
+    
+}
+
+h1{
+    color: white;
+    padding: 10px;
+}
+
+#anuncioCreation{
+    width: 80%;
+    height: 500px;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    
+    
+}
+.fondo{
+    background-color: #0a274d;
+    color: white;
+    border-radius: 5px;
+
+}
+
+.borderDiv{
+    display: flex;
+}
+
+.ventaCompra{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 10px 10px 0;
+}

@@ -2,7 +2,7 @@
 
 export const buildAnuncio = (anuncio) => {
     return `
-    <a href="../anunciosDetails.html?id=${anuncio.id}">
+    <a  href="../anunciosDetails.html?id=${anuncio.id}" >
     <span>Anunciante: ${anuncio.handler}</span><br><br>
     <img src="${anuncio.photo}" alt="Imagen del producto"><br><br>
     <span>nombre: ${anuncio.name}</span><br><br>

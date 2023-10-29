@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="notificationsAnuncios/notificationsStyles.css">
     <link rel="stylesheet" href="loader/loadingStyles.css">
+    <link rel="stylesheet" href="anunciosCreation/createStyles.css">
     <title>Cración Anuncios</title>
 </head>
 <body>
@@ -12,27 +13,28 @@
     <section id="notification"></section>
     <section id="loader"></section>
     <form id="anuncioCreation">
-        <label for="photo">Foto</label>
-        <input type="text" name="photo" id="photo" required>
+        <label for="photo" >Foto</label>
+        <input class="fondo" type="text" name="photo" id="photo" required placeholder="ingrese la url de la imagen"><br>
 
         <label for="name">Nombre</label>
-        <input type="text" name="name" id="name" required>
+        <input class="fondo" type="text" name="name" id="name" required placeholder="nombre anuncio"><br>
 
         <label for="date">fecha creación</label>
-        <input type="date"  name="date" id="date" required>
+        <input class="fondo" type="date"  name="date" id="date" required><br>
 
         <label for="description">Descripción</label>
-        <textarea type="text" name="description"  id="description" cols="30" rows="10" required></textarea>
+        <textarea class="fondo" type="text" name="description"  id="description" cols="30" rows="10" required></textarea><br>
 
 
         <label for="price">precio</label>
-        <input type="number" step="any" name="price" id="price" required>
+        <input class="fondo" type="number" step="any" name="price" id="price" required><br>
 
-        <label for="isForSale">En Venta</label>
-        <input type="radio" name="isFor" value="sale" id="isForSale" required>
-
-        <label for="isForPurchase">En Compra</label>
-        <input type="radio" name="isFor" value="purchase" id="isForPurchase" required>
+        <div class="ventaCompra">
+            <label for="isForSale">En Venta</label>
+            <input class="fondo" type="radio" name="isFor" value="sale" id="isForSale" required><br>
+            <label for="isForPurchase">En Compra</label>
+            <input class="fondo" type="radio" name="isFor" value="purchase" id="isForPurchase" required><br>
+        </div>
 
 
         <button type="submit">Crear Anuncio</button>
