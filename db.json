@@ -1,0 +1,127 @@
+{
+  "users": [
+    {
+      "username": "user1@kc.com",
+      "password": "$2b$10$oqadk325DRuM/W6j7s2x7O6nky2JKYb6LkVTR3PsgSJe37z4kbVP2",
+      "id": 1
+    },
+    {
+      "username": "user2@kc.com",
+      "password": "$2b$10$oqadk325DRuM/W6j7s2x7O6nky2JKYb6LkVTR3PsgSJe37z4kbVP2",
+      "id": 2
+    },
+    {
+      "username": "user5@kc.com",
+      "password": "$2b$10$xr.N5cT2sl8I3cPdNVJAtOzXgyLbB3P0fOMPu3CP085RNxFDWYGgS",
+      "id": 3
+    },
+    {
+      "username": "user8@kc.com",
+      "password": "$2b$10$xr.N5cT2sl8I3cPdNVJAtOzXgyLbB3P0fOMPu3CP085RNxFDWYGgS",
+      "id": 4
+    },
+    {
+      "username": "user10@kc.com",
+      "password": "$2b$10$OQLZofbMbtO27HPtTnCxAe5ZqrjLlHvU0st1HjORgIInyhzzhkg5a",
+      "id": 5
+    }
+  ],
+  "anuncios": [
+    {
+      "photo": "https://i.ibb.co/bWVsRd1/Mac-Book-Pro-2022.jpg",
+      "name": "MacBook Pro 2022",
+      "date": "2023-10-28",
+      "description": "MacBook Pro 2022, nueva en caja, procesador M2, 16 GB de RAM, 512 GB de almacenamiento.",
+      "price": "2.199",
+      "isForSale": true,
+      "isForPurchase": false,
+      "userId": 1,
+      "updatedAt": "2023-10-29T00:21:23.323Z",
+      "id": 7
+    },
+    {
+      "photo": "https://i.ibb.co/XCssN5K/galaxys22ultra-front-graphite.jpg",
+      "name": " Samsung Galaxy S22 Ultra",
+      "date": "2023-10-28",
+      "description": "Samsung Galaxy S22 Ultra, desbloqueado, 128 GB de almacenamiento, color negro.",
+      "price": "999.99",
+      "isForSale": true,
+      "isForPurchase": false,
+      "userId": 1,
+      "updatedAt": "2023-10-29T09:55:43.990Z",
+      "id": 8
+    },
+    {
+      "photo": "https://i.ibb.co/5KrwDFp/targetaa-grafica.jpg",
+      "name": "Tarjeta Gráfica NVIDIA RTX 3080",
+      "date": "2023-10-29",
+      "description": " Tarjeta gráfica de alta gama, perfecta para juegos y edición de video, 10 GB de VRAM.",
+      "price": "899",
+      "isForSale": true,
+      "isForPurchase": false,
+      "userId": 2,
+      "updatedAt": "2023-10-29T10:00:00.747Z",
+      "id": 9
+    },
+    {
+      "photo": "https://i.ibb.co/K9f9kQd/auriculares.jpg",
+      "name": " Auriculares Sony WH-1000XM4",
+      "date": "2023-10-28",
+      "description": "Auriculares inalámbricos con cancelación de ruido, alta calidad de sonido, en perfectas condiciones.",
+      "price": "249.99",
+      "isForSale": true,
+      "isForPurchase": false,
+      "userId": 2,
+      "updatedAt": "2023-10-29T10:02:24.047Z",
+      "id": 10
+    },
+    {
+      "photo": "https://i.ibb.co/0F64B2G/Canon-EOS-5-D-Mark-IV-Review-8.jpg",
+      "name": "Cámara Canon EOS 5D Mark IV",
+      "date": "2023-11-05",
+      "description": "Cámara réflex digital de alta gama, 30.4 MP, grabación de video 4K, con lente incluido.",
+      "price": "1.899",
+      "isForSale": true,
+      "isForPurchase": false,
+      "userId": 1,
+      "updatedAt": "2023-10-29T11:55:22.001Z",
+      "id": 11
+    },
+    {
+      "photo": "https://i.ibb.co/42vytJ7/Solo-smart-drone.jpg",
+      "name": "DJI Air 2S",
+      "date": "2023-10-29",
+      "description": "Dron de alto rendimiento con cámara 5.4K, sensores de obstáculos y autonomía de vuelo de 31 minutos.",
+      "price": "1.199",
+      "isForSale": true,
+      "isForPurchase": false,
+      "userId": 4,
+      "updatedAt": "2023-10-29T21:58:33.901Z",
+      "id": 12
+    },
+    {
+      "photo": "https://i.ibb.co/rv3s5d1/airpops.jpg",
+      "name": " Apple AirPods Pro",
+      "date": "2023-10-28",
+      "description": "Auriculares inalámbricos con cancelación de ruido, calidad de sonido excepcional y resistencia al agua.",
+      "price": "249",
+      "isForSale": true,
+      "isForPurchase": false,
+      "userId": 4,
+      "updatedAt": "2023-10-29T22:28:57.189Z",
+      "id": 13
+    },
+    {
+      "photo": "https://i.ibb.co/B6R23ny/GoPro.jpg",
+      "name": "GoPro Hero 10 Black",
+      "date": "2023-10-29",
+      "description": "Cámara de acción de alta calidad para deportes extremos, grabación 5.3K y estabilización avanzada.",
+      "price": "399",
+      "isForSale": true,
+      "isForPurchase": false,
+      "userId": 4,
+      "updatedAt": "2023-10-29T22:31:19.836Z",
+      "id": 14
+    }
+  ]
+}
